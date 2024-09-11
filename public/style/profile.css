@@ -1,0 +1,119 @@
+* {
+    font-family: sans-serif;
+}
+
+.background {
+    /* background: url(https://images.pexels.com/photos/1103970/pexels-photo-1103970.jpeg?) center bottom; */
+    /* background-attachment: fixed;
+    object-fit: cover;
+    background-size: cover;
+    background-attachment: fixed; */
+    /* if you don't use the body selector then use it👆👆👆👆👆 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.transparent {
+    height: 300px;
+    width: 300px;
+    margin: auto;
+    border: 1px solid white;
+    justify-content: center;
+    text-align: left;
+    background-attachment: fixed;
+    object-fit: cover;
+    background-size: cover;
+    background-attachment: fixed;
+    box-shadow: 0px 0px 70px grey;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+p {
+    color: rgb(0, 0, 0);
+    text-align: center;
+    font-size: 20px;
+    line-height: 0.01px;
+}
+
+.log {
+    display: inline-block;
+    padding: 10px 30px;
+    background-color: rgb(0, 95, 95);
+    border-radius: 50px;
+    text-decoration: none;
+    color: rgb(24, 23, 23);
+    margin: auto;
+    font-size: 30px;
+    border: 2px solid white;
+    margin-top: 12%;
+}
+
+.log:hover {
+    background: none;
+}
+
+img {
+    height: 100px;
+    width: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+.premmium {
+    color: blue;
+}
+
+.postsMain {
+    margin-top: 10px;
+    margin-top: 20px;
+    padding: 10px;
+    width: 600px;
+}
+
+.postowner {
+    padding: 10px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    text-align: start;
+}
+
+.post {
+    padding: 10px;
+    text-align: start;
+    margin-bottom: 10px;
+    background-color: rgb(212, 19, 19);
+    font-weight: 800;
+    color: white;
+}
+
+.likeEdit {
+    display: flex;
+    justify-content: space-around;
+}
+
+.postText {
+    padding: 10px;
+    text-align: left;
+}
+
+.like {
+    font-size: 20px;
+    text-decoration: underline;
+}
+
+.edit {
+    text-decoration: underline;
+}
+
+.poster {
+    margin-bottom: 0px;
+    width: 600px;
+    background-color: gray;
+}

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/style/profile.css">
+</head>
+
+<body>
+    <form action="/update/<%= posts._id%>" method="post">
+        <div class="transparent">
+            <textarea cols="40" rows="20" style="padding: 10px;resize: none;" name="content" required><%=posts.content%> </textarea>
+            <button type="submit" class="log">update</button>
+        </div>
+    </form>
+</body>
+
+</html>

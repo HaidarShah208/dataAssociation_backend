@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/style/profile.css">
+    <style>
+        .profile {
+            width: 100px;
+            height: 200px;
+            border-radius: 50%;
+            margin: 0 auto;
+            cursor: pointer;
+            background-color: red;
+            margin: 10px 0;
+        }
+        
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="background">
+        <div class="transparent">
+            <div class="profile">
+                <img src="/image/upload/<%= userData.profile%>" alt="sss">
+            </div>
+            <p><b><%= userData.name %></b></p>
+            <p>
+                <%= userData.email %>
+            </p>
+            <p>
+                <%= userData.age %>
+            </p>
+            <form action="/logout" method="get">
+                <button type="submit" class="log">Log out</button>
+            </form>
+        </div>
+        <form action="/post" method="post">
+            <div class="transparent">
+                <textarea cols="40" rows="20" style="padding: 10px;resize: none;" name="content" required> </textarea>
+                <button type="submit" class="log">create</button>
+            </div>
+        </form>
+
+    </div>
+
+    <div class="postsMain">
+        <p class="post">Your Posts
+            <%= userData.posts.length %>
+        </p>
+        <% userData.posts.reverse().forEach((posts)=>{ %>
+            <div class="poster">
+                <p class="postowner">
+                    <%= userData.name %>
+                </p>
+                <p class="postText">
+                    <%= posts.content %>
+                        <div class="likeEdit">
+                            <a class="like" href="/like/<%= posts._id %>">Like</a>
+                            <a class="edit" href="/edit/<%= posts._id%>">edit</a>
+                        </div>
+            </div>
+    </div>
+    <% }) %>
+        </div>
+</body>
+
+</html>
