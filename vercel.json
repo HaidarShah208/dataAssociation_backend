@@ -9,5 +9,9 @@
       "src": "/(.*)",
       "dest": "/app.js"
     }
+  ],
+ "files": [
+    "views/index.ejs",
+    "public/**"
   ]
 }
