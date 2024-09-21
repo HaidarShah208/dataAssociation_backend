@@ -4,11 +4,10 @@
         "src": "app.js",
         "use": "@vercel/node"
     }],
-    "routes": [
-        {
-            "src": "app.js",
-            "dest": "app.js",
-            "methods": ["GET", "POST", "PATCH", "DELETE", "OPTIONS"]
-        }
-    ]
+   "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/app.js"
+    }
+  ]
 }
