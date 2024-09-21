@@ -10,16 +10,16 @@ const path=require("path");
 const postModel = require("./model/posts.model");
 const crypto = require("crypto");
 const multer  = require('multer');
-app.set("view engine", "ejs");
 require("dotenv").config();
 app.use(cors());
-app.use(express.static(path.join(__dirname, "public")))
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 
 
-
+app.set("views", __dirname + "/views");
+app.set("view engine", "ejs");
+app.use(express.static(__dirname + "public"));
 
 ////////////////////// upload file
 const storage = multer.diskStorage({
